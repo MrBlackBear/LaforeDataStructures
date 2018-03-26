@@ -1,9 +1,9 @@
 package array;
 
-public class ArrayApp {
+public class OrderedApp {
     public static void main(String[] args) {
         int maxSize = 100;
-        Array arr = new Array(maxSize);
+        OrdArray arr = new OrdArray(maxSize);
         arr.insert(77);
         arr.insert(99);
         arr.insert(44);
@@ -14,13 +14,13 @@ public class ArrayApp {
         arr.insert(00);
         arr.insert(66);
         arr.insert(33);
-        arr.display();
-        int searchKey = 35;
-        if (arr.find(searchKey)) {
+        int searchKey = 55;
+        if (arr.find(searchKey) != arr.size()) {
             System.out.println(String.format("Found %s", searchKey));
         } else {
             System.out.println(String.format("Can't find %s", searchKey));
         }
+        arr.display();
         arr.delete(00);
         arr.delete(55);
         arr.delete(99);
